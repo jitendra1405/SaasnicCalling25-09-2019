@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script>
 function showhide() {
 var e = document.getElementById('uniquename');
@@ -23,7 +21,9 @@ $.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, passwo
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, user-scalable=no" /> 
 </head>
-
+<a href="javascript:showhide()">
+Click to show/hide.
+</a>
 
 <body>
 <div id="uniquename" style="display:none;">
@@ -46,44 +46,6 @@ $.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, passwo
 <br>
 <button type="submit" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Login</button>
 </form>
-  
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Modal Header</h2>
-      </header>
-      <div class="w3-container">
-        <a href="javascript:showhide()">
-Click to show/hide.
-</a>
-        <p>You have two options to close this modal:</p>
-        <p>Click on the "x" or click anywhere outside of the modal!</p>
-      </div>
-      <footer class="w3-container w3-teal">
-        <p>Modal Footer</p>
-      </footer>
-    </div>
-  </div>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-  
-  
-  
-  
 </body>
 </div>
 </html>
