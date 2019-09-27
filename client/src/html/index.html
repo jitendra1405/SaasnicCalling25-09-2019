@@ -1,68 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <script>
-
 function showhide() {
 var e = document.getElementById('uniquename');
 var ef = document.getElementById('un');
 e.style.display = (e.style.display == 'block') ? 'none' : 'block';
 ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
 }
-
-</script>
-
-
-
-
-<a href="javascript:showhide()">
-Click to show/hide.
-</a>
-
-<button id="myBtn">Open Modal</button>
-
-<div id="uniquename" style="display:none;">
-
-<head>
-
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, user-scalable=no" />
-   
-</head>
-
-<body>
-<nav class="navbar-header">
-<span class="navbar-brand">
-<img src="${require(`../assets/saasnic-logo-1.png`)}" /> SaaSnic VideoCall
-</span>
-</nav>
-
-<div id="root"></div>
-
-
-</body> 
-
-
-</div>
-
-
-
-
-
-
-
-
-<head>
-
-
-<!--<meta http-equiv="Refresh" content="5; url=re.html">-->
-
-
-
-
-<title>Simple login</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
 function login() {
 const username = $("#ipUsername").val();
 const password = $("#ipPassword").val();
@@ -71,13 +15,26 @@ $.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, passwo
 });
 }
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" /> 
 </head>
 
-
-
-
-<div id="un">
+<a href="javascript:showhide()">
+Click to show/hide.
+</a>
 <body>
+<div id="uniquename" style="display:none;">
+<nav class="navbar-header">
+<span class="navbar-brand">
+<img src="${require(`../assets/saasnic-logo-1.png`)}" /> SaaSnic VideoCall
+</span>
+</nav>
+<div id="root"></div>
+</div>
+<div id="un">
 <h1>Sign in</h1>
 <form onsubmit="login()">
 <label for="ipUsername">Username:</label>
@@ -89,7 +46,6 @@ $.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, passwo
 <br>
 <button type="submit">Login</button>
 </form>
-
 </body>
 </div>
 </html>
