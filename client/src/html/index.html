@@ -56,6 +56,9 @@ function windowOnClick(event) {
         toggleModal();
     }
 }
+  trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
 function showhide() {
 var e = document.getElementById('uniquename');
 var ef = document.getElementById('un');
