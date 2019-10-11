@@ -9,24 +9,24 @@ const socket = require('./socket');
 var abcd = [] ;
 
 
-var mysql = require('mysql'); 
+/*var mysql = require('mysql'); 
 var con = mysql.createConnection({ 
 host : 'sql12.freemysqlhosting.net',
 database : 'sql12306370',
 user : 'sql12306370',
 password : 'tfR9HnxDVV', 
-}); 
+}); */
 
 
 
 
-function setValue(value) {
+/*function setValue(value) {
 someVar = value[0].UserName;
 console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 }
 
 
-console.log('abovee the body vlaueeeeee varrrr');
+console.log('abovee the body vlaueeeeee varrrr');*/
 
 
 
@@ -64,7 +64,7 @@ app.get('/', (req, res) => {
 res.sendFile(`${__dirname}/index.html`);
 });
 
-app.post('/login', (req, res) => {
+/*app.post('/login', (req, res) => {
 const username = req.body.username;
 const password = req.body.password;
 console.log(`POST request: username is ${username} and password is ${password}`);
@@ -86,7 +86,7 @@ setValue(result);
 
 
 
-});
+});*/
 
 //module.exports = { abcde: abcd };
 //module.exports.vari = abcd;
@@ -128,7 +128,7 @@ const users = {};
 
 // Random ID until the ID is not in use
 async function randomID() {
-let id = abcd ;
+let id = 'saasnic' ;
 while (id in users) {
 await Promise.delay(5);
 
